@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SB Craft Jerky | Small-Batch, Big Flavor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Premium, small-batch craft beef jerky with bold, exotic flavors. Handcrafted in small batches for maximum flavor and freshness."
+  />
+
+  <!-- Optional web fonts (safe to remove if you want only system fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Inknut+Antiqua:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --color-primary: #6e2c26;
+      --color-primary-dark: #4b1f1b;
+      --color-accent: #fce477;
+      --color-bg: #fdfdfd;
+      --color-bg-alt: #f2f2f2;
+      --color-text-main: #2b1b18;
+      --color-text-muted: #7b6661;
+      --color-border-soft: #e0d6d3;
+      --radius-soft: 12px;
+      --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.12);
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: var(--color-bg);
+      color: var(--color-text-main);
+      font-family: "Inknut Antiqua", serif;
+      font-size: 16px;
+      scroll-behavior: smooth;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-inner {
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      background: rgba(253, 253, 253, 0.96);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.035);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 0;
+      gap: 1rem;
+    }
+
+    .brand-mark {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .brand-logo {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #fce477, #6e2c26);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fdfdfd;
+      font-family: "Arvo", serif;
+      font-size: 1rem;
+      font-weight: 700;
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    }
+
+    .brand-text-main {
+      font-family: "Arvo", serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .brand-text-sub {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.13em;
+      color: var(--color-text-muted);
+    }
+
+    .nav-main {
+      display: flex;
+      align-items: center;
+      gap: 1.4rem;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-main a {
+      position: relative;
+      padding-bottom: 0.2rem;
+      color: var(--color-text-muted);
+      transition: color 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .nav-main a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--color-primary);
+      transition: width 0.2s ease;
+    }
+
+    .nav-main a:hover {
+      color: var(--color-primary);
+    }
+
+    .nav-main a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.6rem 1.3rem;
+      background: var(--color-primary);
+      color: #fdfdfd !important;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      border: 1px solid var(--color-primary-dark);
+      box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25),
+        0 12px 30px rgba(0, 0, 0, 0.26);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      transition: transform 0.15s ease, box-shadow 0.15s ease,
+        background 0.15s ease;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      background: var(--color-primary-dark);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.3);
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 2.5rem 0 3.5rem;
+    }
+
+    .hero-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.23em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      font-family: "Arvo", serif;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero-title {
+      font-family: "Arvo", serif;
+      font-size: clamp(2.3rem, 3vw, 2.9rem);
+      line-height: 1.05;
+      letter-spacing: 0.02em;
+      margin: 0 0 0.9rem;
+      color: var(--color-primary-dark);
+    }
+
+    .hero-highlight {
+      display: inline-block;
+      padding: 0.18em 0.4em;
+      border-radius: 999px;
+      background: linear-gradient(120deg, #fce477, #f9d03e);
+      box-decoration-break: clone;
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--color-text-muted);
+      max-width: 30rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.5rem;
+      font-size: 0.75rem;
+    }
+
+    .badge-pill {
+      padding: 0.35rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid rgba(110, 44, 38, 0.22);
+      background: rgba(252, 228, 119, 0.12);
+      color: var(--color-primary-dark);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-family: "Arvo", serif;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.8rem 1.6rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      border: 1px solid transparent;
+      cursor: pointer;
+      background: none;
+      transition: transform 0.16s ease, box-shadow 0.16s ease,
+        background 0.16s ease, color 0.16s ease, border-color 0.16s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--color-primary);
+      color: #fdfdfd;
+      border-color: var(--color-primary-dark);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.32);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      background: var(--color-primary-dark);
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.38);
+    }
+
+    .btn-ghost {
+      background: #fdfdfd;
+      color: var(--color-primary-dark);
+      border-color: var(--color-border-soft);
+    }
+
+    .btn-ghost:hover {
+      background: var(--color-bg-alt);
+      border-color: var(--color-primary);
+      transform: translateY(-1px);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
+    }
+
+    .hero-meta {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 999px;
+      background: var(--color-primary);
+      display: inline-block;
+    }
+
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-card {
+      border-radius: 34px;
+      background: radial-gradient(circle at 0% 0%, #fce477, #6e2c26 52%, #120808);
+      padding: 1rem;
+      box-shadow: var(--shadow-soft);
+      color: #fdfdfd;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-product-photo {
+      border-radius: 24px;
+      overflow: hidden;
+      background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.25),
+        rgba(0, 0, 0, 0.55)
+      );
+      min-height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      isolation: isolate;
+    }
+
+    .hero-product-photo::after {
+      content: "Craft Jerky";
+      position: absolute;
+      inset: auto 5% 10% auto;
+      padding: 0.4rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.55);
+      font-size: 0.75rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    .hero-product-silhouette {
+      width: 70%;
+      max-width: 260px;
+      border-radius: 32px;
+      background: linear-gradient(145deg, #fce477, #f4cc46);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.55);
+      position: relative;
+    }
+
+    .hero-product-silhouette::before {
+      content: "";
+      position: absolute;
+      inset: 12%;
+      border-radius: inherit;
+      border: 2px dashed rgba(110, 44, 38, 0.3);
+    }
+
+    .hero-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1rem;
+      font-size: 0.8rem;
+    }
+
+    .hero-rating {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .stars {
+      display: inline-flex;
+      gap: 0.12rem;
+      font-size: 0.8rem;
+    }
+
+    .stars span {
+      color: #fce477;
+    }
+
+    .hero-chip {
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      background: rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(252, 228, 119, 0.6);
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    /* SECTION WRAPPERS */
+
+    .section {
+      padding: 3rem 0;
+    }
+
+    .section-header {
+      text-align: left;
+      margin-bottom: 1.8rem;
+    }
+
+    .section-eyebrow {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--color-primary);
+      margin-bottom: 0.4rem;
+      font-family: "Arvo", serif;
+    }
+
+    .section-title {
+      font-family: "Arvo", serif;
+      font-size: 1.7rem;
+      margin: 0 0 0.5rem;
+      color: var(--color-primary-dark);
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      max-width: 32rem;
+    }
+
+    .section--muted {
+      background: var(--color-bg-alt);
+    }
+
+    /* BEST SELLERS */
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .product-card {
+      background: #ffffff;
+      border-radius: var(--radius-soft);
+      border: 1px solid rgba(0, 0, 0, 0.03);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.06);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      min-height: 100%;
+    }
+
+    .product-media {
+      aspect-ratio: 3 / 4;
+      background: radial-gradient(circle at 10% 0%, #fce477, #6e2c26);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.1rem;
+      position: relative;
+    }
+
+    .product-tag {
+      position: absolute;
+      inset: 0.8rem auto auto 0.9rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(253, 253, 253, 0.92);
+      color: var(--color-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.7rem;
+      font-family: "Arvo", serif;
+    }
+
+    .product-content {
+      padding: 1rem 1.1rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      flex: 1;
+    }
+
+    .product-title {
+      font-family: "Arvo", serif;
+      font-size: 1rem;
+      margin: 0;
+      color: var(--color-primary-dark);
+    }
+
+    .product-flair {
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+    }
+
+    .product-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      margin-top: 0.4rem;
+    }
+
+    .product-price {
+      font-weight: 700;
+    }
+
+    .product-cta {
+      margin-top: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.7rem;
+    }
+
+    .product-cta .btn {
+      flex: 1;
+      font-size: 0.75rem;
+      padding-inline: 0.9rem;
+    }
+
+    /* PROCESS SECTION */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.5rem;
+    }
+
+    .process-card {
+      border-radius: var(--radius-soft);
+      border: 1px solid var(--color-border-soft);
+      padding: 1.3rem 1.4rem;
+      background: #ffffff;
+    }
+
+    .process-step {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      color: var(--color-primary);
+      margin-bottom: 0.4rem;
+      font-family: "Arvo", serif;
+    }
+
+    .process-title {
+      font-family: "Arvo", serif;
+      font-size: 1.05rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .process-body {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+    }
+
+    /* FLAVOR STRIP */
+
+    .flavor-strip {
+      border-radius: 22px;
+      background: linear-gradient(120deg, #6e2c26, #b90000);
+      padding: 1.1rem 1.3rem;
+      color: #ffffff;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.9rem;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .flavor-strip-title {
+      font-family: "Arvo", serif;
+      font-size: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      white-space: nowrap;
+    }
+
+    .flavor-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      font-size: 0.8rem;
+    }
+
+    .flavor-pill {
+      padding: 0.4rem 0.7rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.55);
+      background: rgba(0, 0, 0, 0.2);
+    }
+
+    /* REVIEWS */
+
+    .reviews-shell {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 2.2rem;
+      align-items: center;
+    }
+
+    .reviews-highlight {
+      border-radius: var(--radius-soft);
+      background: #ffffff;
+      padding: 1.4rem 1.5rem;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(0, 0, 0, 0.02);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .reviews-highlight::before {
+      content: "★ Verified taste buds";
+      position: absolute;
+      top: 0.6rem;
+      right: 0.7rem;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--color-primary);
+      opacity: 0.8;
+    }
+
+    .reviews-stars-large {
+      font-size: 1.2rem;
+      color: #f5c542;
+      margin-bottom: 0.4rem;
+    }
+
+    .reviews-score {
+      font-size: 0.9rem;
+      color: var(--color-text-muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .review-quote {
+      font-family: "Arvo", serif;
+      font-size: 1rem;
+      line-height: 1.5;
+      margin-bottom: 0.8rem;
+    }
+
+    .review-meta {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+    }
+
+    .review-meta strong {
+      color: var(--color-primary-dark);
+    }
+
+    /* NEWSLETTER / CTA */
+
+    .cta-panel {
+      border-radius: var(--radius-soft);
+      background: #121212;
+      color: #ffffff;
+      padding: 1.8rem 1.6rem;
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .cta-panel h3 {
+      font-family: "Arvo", serif;
+      font-size: 1.4rem;
+      margin: 0 0 0.45rem;
+    }
+
+    .cta-panel p {
+      font-size: 0.9rem;
+      color: #bbbbbb;
+      margin: 0;
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+
+    .newsletter-input {
+      flex: 1 1 180px;
+      min-width: 0;
+      padding: 0.75rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      background: rgba(0, 0, 0, 0.45);
+      color: #ffffff;
+      font-size: 0.85rem;
+      outline: none;
+    }
+
+    .newsletter-input::placeholder {
+      color: #888888;
+    }
+
+    .newsletter-btn {
+      border-radius: 999px;
+      border: 1px solid rgba(252, 228, 119, 0.75);
+      background: #fce477;
+      color: #121212;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 0.78rem 1.4rem;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: transform 0.14s ease, box-shadow 0.14s ease,
+        background 0.14s ease;
+    }
+
+    .newsletter-btn:hover {
+      background: #f4cc46;
+      transform: translateY(-1px);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, 0.3);
+    }
+
+    .newsletter-caption {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #999999;
+      margin-top: 0.4rem;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+      padding: 1.8rem 0 1.6rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.06);
+      margin-top: auto;
+      background: #fdfdfd;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-links a {
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 2px;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      .reviews-shell {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .cta-panel {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 720px) {
+      .hero {
+        padding: 1.8rem 0 2.4rem;
+      }
+
+      .section {
+        padding: 2.3rem 0;
+      }
+
+      .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .process-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .flavor-strip {
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .product-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .header-inner {
+        padding-block: 0.7rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="page-inner header-inner">
+        <div class="brand-mark">
+          <div class="brand-logo">SB</div>
+          <div>
+            <div class="brand-text-main">SB Craft Jerky</div>
+            <div class="brand-text-sub">Small batch • Big flavor</div>
+          </div>
+        </div>
+
+        <nav class="nav-main" aria-label="Main navigation">
+          <a href="#best-sellers">Shop</a>
+          <a href="#process">How we craft</a>
+          <a href="#flavors">Flavors</a>
+          <a href="#reviews">Reviews</a>
+          <a class="nav-cta" href="#best-sellers">Shop jerky</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div class="page-inner hero-inner">
+          <div>
+            <div class="eyebrow">Handcrafted in small batches</div>
+            <h1 class="hero-title">
+              Small-batch
+              <span class="hero-highlight">craft jerky</span><br />
+              with seriously bold flavor.
+            </h1>
+            <p class="hero-subtitle">
+              We slow-marinate premium cuts, layer in bold, unexpected flavors, and dry each batch just right so every bite snaps, chews, and
+              hits with real flavor — not just salt.
+            </p>
+
+            <div class="hero-badges">
+              <span class="badge-pill">Premium beef</span>
+              <span class="badge-pill">Small-batch crafted</span>
+              <span class="badge-pill">Fast shipping</span>
+            </div>
+
+            <div class="hero-actions">
+              <a href="#best-sellers" class="btn btn-primary">Shop best sellers</a>
+              <a href="#flavors" class="btn btn-ghost">Explore all flavors</a>
+            </div>
+
+            <div class="hero-meta">
+              <span>
+                <span class="dot"></span>
+                Ships fresh from Southern California
+              </span>
+              <span>
+                <span class="dot"></span>
+                Snack-ready bags • zero fuss
+              </span>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-card">
+              <div class="hero-product-photo">
+                <!-- Replace this block with your actual product image -->
+                <div class="hero-product-silhouette"></div>
+              </div>
+              <div class="hero-card-footer">
+                <div class="hero-rating">
+                  <div class="stars">
+                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                  </div>
+                  <div style="font-size: 0.8rem; opacity: 0.9;">
+                    Customers can’t stop snacking.
+                  </div>
+                </div>
+                <div class="hero-chip">Jerky done right</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- BEST SELLERS -->
+      <section id="best-sellers" class="section section--muted">
+        <div class="page-inner">
+          <div class="section-header">
+            <div class="section-eyebrow">The ultimate favorites</div>
+            <h2 class="section-title">Shop our top small-batch flavors.</h2>
+            <p class="section-subtitle">
+              Unsure what to choose? Start with the flavors our regulars grab first — bold, balanced, and dangerously snackable.
+            </p>
+          </div>
+
+          <div class="product-grid">
+            <!-- PRODUCT 1 -->
+            <article class="product-card">
+              <div class="product-media">
+                <!-- swap src with your real product image -->
+                <img
+                  src="https://via.placeholder.com/400x540.png?text=Hot+%26+Spicy+Teriyaki"
+                  alt="Hot &amp; Spicy Teriyaki craft jerky bag"
+                  style="border-radius: 18px; object-fit: cover; width: 100%; height: 100%;"
+                />
+                <div class="product-tag">Best seller</div>
+              </div>
+              <div class="product-content">
+                <h3 class="product-title">Hot &amp; Spicy Teriyaki</h3>
+                <div class="product-flair">Sweet heat • slow-burn finish</div>
+                <div class="product-meta">
+                  <span class="product-price">$10.99</span>
+                  <span style="font-size: 0.8rem; color: var(--color-text-muted);">
+                    2.8 oz bag
+                  </span>
+                </div>
+                <div class="product-cta">
+                  <a href="/products/hot-spicy-teriyaki" class="btn btn-primary">Add to bag</a>
+                  <a href="/products/hot-spicy-teriyaki" class="btn btn-ghost">Details</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- PRODUCT 2 -->
+            <article class="product-card">
+              <div class="product-media">
+                <img
+                  src="https://via.placeholder.com/400x540.png?text=Savory+Original"
+                  alt="Savory original craft jerky bag"
+                  style="border-radius: 18px; object-fit: cover; width: 100%; height: 100%;"
+                />
+                <div class="product-tag">Everyday go-to</div>
+              </div>
+              <div class="product-content">
+                <h3 class="product-title">Savory Original</h3>
+                <div class="product-flair">Classic, smoky, perfectly balanced</div>
+                <div class="product-meta">
+                  <span class="product-price">$9.99</span>
+                  <span style="font-size: 0.8rem; color: var(--color-text-muted);">
+                    2.8 oz bag
+                  </span>
+                </div>
+                <div class="product-cta">
+                  <a href="#" class="btn btn-primary">Add to bag</a>
+                  <a href="#" class="btn btn-ghost">Details</a>
+                </div>
+              </div>
+            </article>
+
+            <!-- PRODUCT 3 -->
+            <article class="product-card">
+              <div class="product-media">
+                <img
+                  src="https://via.placeholder.com/400x540.png?text=Sweet+Heat+Mango"
+                  alt="Sweet heat mango craft jerky bag"
+                  style="border-radius: 18px; object-fit: cover; width: 100%; height: 100%;"
+                />
+                <div class="product-tag">Limited batch</div>
+              </div>
+              <div class="product-content">
+                <h3 class="product-title">Sweet Heat Mango</h3>
+                <div class="product-flair">Fruity, tangy, chili-kissed</div>
+                <div class="product-meta">
+                  <span class="product-price">$11.49</span>
+                  <span style="font-size: 0.8rem; color: var(--color-text-muted);">
+                    2.8 oz bag
+                  </span>
+                </div>
+                <div class="product-cta">
+                  <a href="#" class="btn btn-primary">Add to bag</a>
+                  <a href="#" class="btn btn-ghost">Details</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS / STORY -->
+      <section id="process" class="section">
+        <div class="page-inner">
+          <div class="section-header">
+            <div class="section-eyebrow">How we craft it</div>
+            <h2 class="section-title">Jerky that actually tastes like something.</h2>
+            <p class="section-subtitle">
+              No mystery meat, no shortcuts. Just good ingredients, bold ideas, and enough time for the flavor to really sink in.
+            </p>
+          </div>
+
+          <div class="process-grid">
+            <article class="process-card">
+              <div class="process-step">Step 1</div>
+              <h3 class="process-title">Premium cuts only.</h3>
+              <p class="process-body">
+                We start with quality beef — trimmed, sliced, and prepped for maximum chew and snap. If we wouldn’t eat it, we won’t bag it.
+              </p>
+            </article>
+
+            <article class="process-card">
+              <div class="process-step">Step 2</div>
+              <h3 class="process-title">Bold marinades.</h3>
+              <p class="process-body">
+                Each batch is soaked in small-batch marinades built from real ingredients — think soy, brown sugar, chili, citrus, and spice.
+              </p>
+            </article>
+
+            <article class="process-card">
+              <div class="process-step">Step 3</div>
+              <h3 class="process-title">Slow drying, fast shipping.</h3>
+              <p class="process-body">
+                We dry low and slow for maximum flavor, then bag and ship fresh so your jerky shows up ready to devour, not crumble.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FLAVOR STRIP -->
+      <section id="flavors" class="section">
+        <div class="page-inner">
+          <div class="flavor-strip">
+            <div class="flavor-strip-title">Pick your flavor lane.</div>
+            <div class="flavor-pills">
+              <span class="flavor-pill">Sweet &amp; smoky</span>
+              <span class="flavor-pill">Hot &amp; spicy</span>
+              <span class="flavor-pill">Savory &amp; simple</span>
+              <span class="flavor-pill">Experimental drops</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- REVIEWS / SOCIAL PROOF -->
+      <section id="reviews" class="section section--muted">
+        <div class="page-inner reviews-shell">
+          <div>
+            <div class="section-eyebrow">Customer reviews</div>
+            <h2 class="section-title">People are hiding these bags from their friends.</h2>
+            <p class="section-subtitle">
+              Real customers. Real snacks. No fake “5-star” fluff — just jerky that disappears faster than you planned.
+            </p>
+          </div>
+
+          <aside class="reviews-highlight" aria-label="Featured customer review">
+            <div class="reviews-stars-large">★★★★★</div>
+            <div class="reviews-score">Rated 4.9/5 across all flavors.</div>
+            <p class="review-quote">
+              “Hands down the best jerky I’ve had. Actual flavor, not just salt and preservatives. The Hot &amp; Spicy Teriyaki has the perfect kick.”
+            </p>
+            <div class="review-meta">
+              <strong>Alex R.</strong>
+              &nbsp;•&nbsp;
+              <span>Hot &amp; Spicy Teriyaki fan</span>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- NEWSLETTER / FINAL CTA -->
+      <section class="section">
+        <div class="page-inner">
+          <div class="cta-panel">
+            <div>
+              <h3>Stay in the snack loop.</h3>
+              <p>
+                Be the first to know when new flavors drop, limited batches hit the shop, or we restock fan favorites. No spam — just snacks.
+              </p>
+            </div>
+
+            <div>
+              <form class="newsletter-form" action="#" method="post">
+                <input
+                  class="newsletter-input"
+                  type="email"
+                  name="email"
+                  placeholder="Enter your email for jerky updates"
+                  required
+                />
+                <button class="newsletter-btn" type="submit">Count me in</button>
+              </form>
+              <div class="newsletter-caption">
+                We’ll only email when it’s worth a snack run.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="page-inner footer-inner">
+        <div>© 2025 SB Craft Jerky. All rights reserved.</div>
+        <div class="footer-links">
+          <a href="#">Shipping &amp; returns</a>
+          <a href="#">Privacy</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
